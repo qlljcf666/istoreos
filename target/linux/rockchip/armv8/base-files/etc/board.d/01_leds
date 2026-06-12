@@ -8,6 +8,11 @@ boardname="${board##*,}"
 board_config_update
 
 case $board in
+firefly,onebox-g04)
+	ucidef_set_led_netdev "wan" "WAN" "g04:green:led1" "eth1"
+	ucidef_set_led_netdev "lan" "LAN" "g04:green:led2" "eth0"
+	ucidef_set_led_timer "health" "health" "g04:green:led3" "200" "800"
+	;;
 cyber,cyber3588-aib)
 	ucidef_set_led_netdev "wan" "WAN" "blue:status" "eth0"
 	ucidef_set_led_netdev "lan" "LAN" "green:status" "eth1"
