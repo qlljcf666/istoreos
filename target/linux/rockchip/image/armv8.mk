@@ -25,6 +25,15 @@ define Device/firefly_roc-rk3328-cc
 endef
 TARGET_DEVICES += firefly_roc-rk3328-cc
 
+define Device/firefly_onebox-g04
+  DEVICE_VENDOR := Firefly
+  DEVICE_MODEL := OneBOX-G04
+  SOC := rk3568
+  DEVICE_DTS := rockchip/rk3568-firefly-onebox-g04
+  DEVICE_PACKAGES := kmod-r8169
+endef
+TARGET_DEVICES += firefly_onebox-g04
+
 define Device/friendlyarm_nanopc-t4
   DEVICE_VENDOR := FriendlyARM
   DEVICE_MODEL := NanoPC T4
