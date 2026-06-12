@@ -1,0 +1,29 @@
+/dts-v1/;
+
+#include <rockchip/rk3568-firefly-roc-pc.dts>
+#include "rk3568-ip.dtsi"
+#include "rk3568-ip-rk809.dtsi"
+
+/ {
+	model = "Firefly OneBOX-G04";
+	compatible = "firefly,onebox-g04", "rockchip,rk3568-firefly-roc-pc", "rockchip,rk3568";
+
+	aliases {
+		mmc0 = &sdmmc0;
+		mmc1 = &sdmmc1;
+		mmc2 = &sdhci;
+		mmc3 = &sdmmc2;
+	};
+};
+
+&gmac0 {
+	snps,reset-gpio = <&gpio0 RK_PC5 GPIO_ACTIVE_LOW>;
+	snps,reset-active-low;
+	snps,reset-delays-us = <0 15000 50000>;
+};
+
+&gmac1 {
+	snps,reset-gpio = <&gpio3 RK_PB4 GPIO_ACTIVE_LOW>;
+	snps,reset-active-low;
+	snps,reset-delays-us = <0 15000 50000>;
+};
