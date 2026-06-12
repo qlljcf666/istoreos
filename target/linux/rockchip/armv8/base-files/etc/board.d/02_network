@@ -36,6 +36,7 @@ rockchip_setup_interfaces()
 	friendlyarm,nanopc-t6|\
 	friendlyarm,nanopi-r5c|\
 	friendlyelec,nanopi-r5s-c1|\
+	firefly,onebox-g04|\
 	hlink,h28k|\
 	radxa,e20c|\
 	radxa,e25|\
