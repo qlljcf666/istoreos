@@ -50,7 +50,8 @@ export_ota_url() {
 	friendlyarm,nanopi-r6c)
 		export -n OTA_URL_BASE="https://fw0.koolcenter.com/iStoreOS/r6s"
 		;;
-	firefly,rk3568-roc-pc)
+	firefly,rk3568-roc-pc|\
+	firefly,onebox-g04)
 		export -n OTA_URL_BASE="https://fw0.koolcenter.com/iStoreOS/station-p2"
 		;;
 	hinlink,opc-h66k|\
